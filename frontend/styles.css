@@ -1,0 +1,351 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.brand {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.side-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+.side-menu a:hover {
+    background: #555;
+}
+
+.side-menu .logout {
+    margin-top: 20px;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+header i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main {
+    padding: 20px;
+}
+
+.head-title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-content button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-content button:hover {
+    background: #555;
+}
+
+.unique {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #25282A55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_container .wrapper {
+    width: 480px;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: scale 300ms ease, opacity 200ms ease;
+}
+
+.popup_container .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #25282A;
+    position: relative;
+}
+
+.popup_container .title h3 {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.popup_container .title .closeIcon {
+    margin: 0;
+    padding: 0;
+    height: 1.8rem;
+    width: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transform: translate(70%, -25%);
+}
+
+.popup_container .title .closeIcon:hover {
+    background: #25282A20;
+}
+
+.popup_container .content,
+.popup_container .content #newTeacherForm {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup_container .content .inputBox {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+}
+
+.popup_container .content .label {
+    font-size: 1.1rem;
+}
+
+.popup_container .content .input {
+    width: 100%;
+    margin: 0;
+    padding: 0.4rem 0rem;
+    border: none;
+    outline: 1px solid #567;
+    border-radius: 0.15rem;
+    font-size: 1rem;
+}
+
+.popup_container .content .input[type="text"] {
+    width: calc(100% - 0.6rem);
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.popup_container .content .input:focus {
+    outline: 2px solid #567;
+}
+
+
+.popup_container .content .input option {
+    padding: 0.2rem 0;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: #EDF1F4;
+}
+
+.popup_container .content .inputBox .submitButton {
+    background-color: #25282A;
+    color: white;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.popup_container .content .inputBox .submitButton:focus-visible {
+    outline: 2px solid #25282A;
+    outline-offset: 2px;
+}
+
+section.hidden,
+section.hidden .wrapper {
+    opacity: 0;
+    scale: 0;
+
+}
+
+.teachersListDisplay .wrapper {
+    overflow-y: auto;
+
+}
+
+.teachersListDisplay .wrapper .content {
+    width: 100%;
+    max-height: calc(90vh - 2rem);
+    max-height: calc(90dvh - 2rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1rem;
+}
+
+.teachersListDisplay .closeBtn {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    background-color: #25282A95;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.teachersListDisplay .closeBtn:hover {
+    background-color: #25282A;
+}
+
+.teachersListDisplay .teacherCard {
+    background-color: #EDF1F4;
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.3rem;
+}
+
+.teachersListDisplay .teacherCard .name {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.teachersListDisplay .teacherCard .subject {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+}
+
+.teachersListDisplay .teacherCard .subject label {
+    opacity: 0.9;
+    margin-right: 0.3rem;
+}
+
+.teachersListDisplay .teacherCard .subject .subjectName {
+    padding: 0;
+    margin: 0.4rem 0;
+}
+
+.teachersListDisplay .teacherCard .classes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.4rem;
+}
+
+.teachersListDisplay .teacherCard .classes .class {
+    background-color: #25282A;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.2rem;
+}

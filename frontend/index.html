@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Class Routine System</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <div class="brand">
+            <i class='bx bx-home'></i>
+            <span class="text">Home</span>
+        </div>
+        <ul class="side-menu top">
+            <li>
+                <a href="#">
+                    <i class='bx bx-home'></i>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-smile'></i>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-male'></i>
+                    <span class="text">Teacher</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-rectangle'></i>
+                    <span class="text">Class</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-book'></i>
+                    <span class="text">Subject</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-file-blank'></i>
+                    <span class="text">Routine</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="content">
+
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Home</h1>
+                </div>
+            </div>
+
+            <div class="cards-container">
+                <div class="card">
+                    <i class='bx bxs-user'></i>
+                    <div class="card-content">
+                        <h3>Teachers</h3>
+                        <div class="unique">
+                            <p>No of professors created so far: </p>
+                            <p id="professors_count_display">0</p>
+                        </div>
+                        <button class="addNewTeacherBtn">Add Teacher</button>
+                        <button class="teachersListDisplayViewBtn">View</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class='bx bxs-building'></i>
+                    <div class="card-content">
+                        <h3>Classes</h3>
+                        <div class="unique">
+                            <p>No of classes created so far: </p>
+                            <p>10</p>
+                        </div>
+                        <button onclick="location.href='#'">Add Class</button>
+                        <button>View</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class='bx bx-book'></i>
+                    <div class="card-content">
+                        <h3>Subjects</h3>
+                        <div class="unique">
+                            <p>No of subjects created so far: </p>
+                            <p>10</p>
+                        </div>
+                        <button onclick="location.href='#'">Add Subjects</button>
+                        <button>View</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class='bx bx-calendar'></i>
+                    <div class="card-content">
+                        <h3>Routines</h3>
+                        <div class="unique">
+                            <p>No of subjects created so far: </p>
+                            <p>10</p>
+                        </div>
+                        <button onclick="location.href='#'">Add Routines</button>
+                        <button>View</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section class="newTeacherForm popup_container hidden">
+        <div class="wrapper">
+            <div class="title">
+                <h3>Add Teacher/Professor</h3>
+                <div class="closeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                      class="type-fill">
+                        <path
+                          d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="content">
+                <form action="" id="newTeacherForm">
+
+                    <div class="nameInputBox inputBox">
+                        <label for="newTeacherName" class="label">Name:</label>
+                        <input type="text" name="newTeacherName" id="newTeacherName" class="input"
+                          placeholder="Professor Name" required>
+                    </div>
+
+                    <div class="nameInputBox inputBox">
+                        <label for="newTeacherName" class="label">Subject:</label>
+                        <select name="newTeacherName" id="newTeacherSubject" class="input" required>
+                            <option value="select">Select a subject</option>
+                            <option value="select">Loading ...</option>
+                        </select>
+                    </div>
+                    <div class="nameInputBox inputBox">
+                        <label for="newTeacherName" class="label">Classes:</label>
+                        <select name="newTeacherName" id="newTeacherClasses" class="input" required>
+                            <option value="select">Select the classes</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Senior">Senior</option>
+                        </select>
+                    </div>
+
+                    <div class="nameInputBox inputBox">
+                        <button type="submit" class="input submitButton">Create</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="teachersListDisplay popup_container hidden">
+        <div class="closeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+              class="type-fill">
+                <path
+                  d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+            </svg>
+        </div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="teacherCard">
+                    <div class="name">Albus Dumbeldore</div>
+                    <div class="subject">
+                        <label for="subjectName">Subject: </label>
+                        <p class="subjectName" id="subjectName">Spell Brewing</p>
+                    </div>
+                    <div class="classes" id="classesList">
+                        <div class="class">VI</div>
+                        <div class="class">IX</div>
+                        <div class="class">X</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+    <script src="addTeacher.js" defer></script>
+</body>
+
+</html>
